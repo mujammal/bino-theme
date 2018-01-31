@@ -4,7 +4,8 @@
 * ==================================================
 */
 
-html, body {
+html,
+body {
     height: 100%;
     font-size: 100%;
     font-family: 'Open Sans', sans-serif;
@@ -18,6 +19,10 @@ html,
     box-sizing: border-box;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
 
 /*
 * ==================================================
@@ -33,8 +38,22 @@ html,
 .row {
     width: 100%;
     max-width: 1140px;
-    margin: 0 auto;    
+    margin: 0 auto;
     padding: 0;
+}
+
+.row .row {
+    width: auto;
+    max-width: none;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 0;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 .container::before,
@@ -56,55 +75,64 @@ html,
     clear: both;
 }
 
-[class*="col-"]::after{
+[class*="col-"]::after {
     clear: both;
 }
 
 
 /*
 * ==================================================
-* 03. Responsive Mobile design first
+* 04. Colums
 * ==================================================
 */
 
-[class*="col-"] {
-    width: 100%;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+.col-1 {
+    width: 8.33%;
 }
 
+.col-2 {
+    width: 16.66%;
+}
 
+.col-3 {
+    width: 25%;
+}
 
-/*
-* ==================================================
-* 04. Responsive design for desktop
-* ==================================================
-*/
+.col-4 {
+    width: 33.33%;
+}
 
-@media only screen and (min-width: 768px) {
-    
-    [class*="col-"] {
-        float: left;
-        padding: 0;
-        -webkit-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;
-    }
-    
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+.col-5 {
+    width: 41.66%;
+}
 
-} /* end media bracket */
+.col-6 {
+    width: 50%;
+}
 
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
 
 /*
 * ==================================================
@@ -113,11 +141,11 @@ html,
 */
 
 .style1 {
-    background-color: #ffffff !important;
+    background-color: #FFFFFF !important;
 }
 
 .style2 {
-    background-color: #F7F9FB !important;
+    background-color: #F4F5F9 !important;
 }
 
 .clearfix::after {
@@ -131,6 +159,11 @@ html,
     color: #F52B8A;
 }
 
-
-
-
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid #eee;
+    margin: 0;
+    padding: 0;
+}
